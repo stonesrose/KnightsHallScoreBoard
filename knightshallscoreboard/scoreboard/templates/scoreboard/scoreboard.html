@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>{{ currentRound.homeTeamScore }} - {{ currentRound.awayTeamScore }}</title>
+<style>
+  td {
+   text-align: center;
+   position: relative
+  }
+  .homeTeam {
+    font-size: 5em;
+        color: green;
+   text-align: center;
+  }
+  .awayTeam {
+    font-size: 5em;
+        color: red;
+   text-align: center;
+  }
+  .homeScore {
+    font-size: 40em;
+        color: green;
+   text-align: center;
+  }
+  .awayScore {
+    font-size: 40em;
+        color: red;
+  }
+  .round {
+    font-size: 10em;
+        color: black;
+  }
+  }
+</style>
+    </head>
+    <body>
+        <table width=100%>
+            <tr>
+                <td class="homeTeam">HOME<br>{{ currentRound.matchInfo.homeTeam }}</td>
+                <td class="round"></td>
+                <td class="awayTeam">Away<br>{{ currentRound.matchInfo.awayTeam }}</td>
+            </tr>
+
+            <tr>
+                <td class="homeScore"></p>{{ currentRound.homeTeamScore }}</td>
+                <td <td class="round">Round<br>{{ currentRound.round }}</td>
+                <td class="awayScore">{{ currentRound.awayTeamScore }}</td>
+            </tr>
+        </table>
+    </body>
+
+</html>
