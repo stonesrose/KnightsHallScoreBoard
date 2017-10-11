@@ -2,6 +2,9 @@ from django.db import models
 
 class teamInfo(models.Model):
     teamName = models.CharField(max_length=100, primary_key=True)
+    teamImage = models.CharField(max_length=100, default="ACL_defaul.png" )
+    teamColors = models.CharField(max_length=100, default="#ffffff,#ffffff") #comma seperated 2 RGB primary colors:  balck,white = #000000,#ffffff
+    teamLocation = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.teamName

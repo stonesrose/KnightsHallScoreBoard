@@ -1,0 +1,30 @@
+<h2><center>Create New Match</center></h2>
+<br>
+<form action="/scoreboard/create/" method="get" id="form1">
+ Home Team:
+
+ <select name="homeTeam">
+    {% for team in teams %}
+        {% ifequal team.id selected_team.id %}
+            <option value="{{team.teamName}}" selected="selected"> {{team.teamName}}</option>
+        {% else %}
+            <option value="{{team.teamName}}">{{team.teamName}}</option>
+        {% endifequal %}
+    {% endfor %}
+</select>
+ <br>
+ Away Team:
+  <select name="awayTeam">
+    {% for team in teams %}
+        {% ifequal team.id selected_team.id %}
+            <option value="{{team.teamName}}" selected="selected"> {{team.teamName}}</option>
+        {% else %}
+            <option value="{{team.teamName}}">{{team.teamName}}</option>
+        {% endifequal %}
+    {% endfor %}
+</select>
+ <br>
+ Close Other Matches: <input type="checkbox" id="closeMatches" name="closeMatches" value="closeMatches" checked>
+
+<button type="submit" form="form1" value="Submit">Submit</button>
+</form>
