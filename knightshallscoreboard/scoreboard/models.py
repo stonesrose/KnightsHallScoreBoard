@@ -5,6 +5,8 @@ class teamInfo(models.Model):
 
     def __str__(self):
         return self.teamName
+    class Meta:
+        ordering = ['teamName']
 
 
 class matchType(models.Model):
@@ -24,6 +26,8 @@ class matchInfo(models.Model):
     homeTeam = models.ForeignKey(teamInfo, related_name='homeTeam',)
     awayTeam = models.ForeignKey(teamInfo, related_name='awayTeam',)
     numberRounds = models.IntegerField(blank=True, null=True)
+    matchComplete = models. BooleanField(blank=True)
+    matchnumber = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.name
