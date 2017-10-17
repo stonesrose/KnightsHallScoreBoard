@@ -1,0 +1,95 @@
+body {
+    background-color:black;
+}
+
+h1 {
+    font-size: 7em;
+    margin: 0;
+}
+
+.logo {
+    width:100%;
+    margin: 20px 5px 20px 5px;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.col {
+    margin: 0;
+    padding: 0;
+}
+
+.board {
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(black, black, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, black, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, black, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, black, blue); /* Standard syntax */
+    border-radius: 40px;
+    border: 5px solid blue;
+    margin: 10px;
+
+}
+
+/*.backdrop {
+    background-image: url(../../../static/images/KnightsHallLogo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+}*/
+
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    color: green;
+    text-align: center;
+}
+
+.away {
+    color: red;
+    text-align: center;
+}
+
+.team {
+    font-size: 5em;
+    vertical-align: bottom;
+}
+
+.score {
+    font-size: 20em;
+    text-align: center;
+    margin: -100 0;
+}
+
+.roundNum {
+    color: white;
+    font-size: 15em;
+    text-align: center;
+}
+
+.roundBox {
+    border-radius: 25px;
+    border: 2px solid white;
+    margin:20px;
+}
+
+.round {
+    text-align:center;
+    color: white;
+    padding: 0;
+}
+
+.teamIMG {
+    text-align: center;
+}
+
+.crest {
+    width: 250px;
+}
