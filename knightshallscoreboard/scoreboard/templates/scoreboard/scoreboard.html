@@ -1,51 +1,94 @@
 <html>
-    <head>
-        <title>{{ currentRound.homeTeamScore }} - {{ currentRound.awayTeamScore }}</title>
-<style>
-  td {
-   text-align: center;
-   position: relative
-  }
-  .homeTeam {
-    font-size: 5em;
-        color: green;
-   text-align: center;
-  }
-  .awayTeam {
-    font-size: 5em;
-        color: red;
-   text-align: center;
-  }
-  .homeScore {
-    font-size: 40em;
-        color: green;
-   text-align: center;
-  }
-  .awayScore {
-    font-size: 40em;
-        color: red;
-  }
-  .round {
-    font-size: 10em;
-        color: black;
-  }
-  }
-</style>
-    </head>
-    <body>
-        <table width=100%>
-            <tr>
-                <td class="homeTeam">HOME<br>{{ currentRound.matchInfo.homeTeam }}</td>
-                <td class="round"></td>
-                <td class="awayTeam">Away<br>{{ currentRound.matchInfo.awayTeam }}</td>
-            </tr>
+<head>
+    <title>
+        <!--{{ currentRound.homeTeamScore }} - {{ currentRound.awayTeamScore }}-->
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/main.css" />
+</head>
+<body>
+    <!--Main Scoreboard Container-->
+    <div class="container-fluid board" id="grad" name="scoreboard">
+        <div class="row" name="body">
 
-            <tr>
-                <td class="homeScore"></p>{{ currentRound.homeTeamScore }}</td>
-                <td class="round">Round<br>{{ currentRound.round }}</td>
-                <td class="awayScore">{{ currentRound.awayTeamScore }}</td>
-            </tr>
-        </table>
-    </body>
+            <!--Column 1 Home Team Score-->
+
+            <div class="col" name="bodyCol1">
+                <div class="row" name="bodyCol1row1">
+                    <div class="col home">
+                        <h1>HOME</h1>
+                    </div>
+                </div>
+                <div class="row" name="bodyCol1row2">
+                    <div class="col teamIMG">
+                        <img src="../../static/images/darkKnights.png" class="crest" />
+                    </div>
+                </div>
+                <div class="row" name="bodyCol1row3">
+                    <div class="col home team">
+
+                        <!--{{ currentRound.matchInfo.homeTeam }}-->
+                        Team Name
+                    </div>
+                </div>
+                <div class="row" name="bodyCol1row4">
+                    <div class="col home score">
+                        <!--{{ currentRound.homeTeamScore }}-->
+                        0
+                    </div>
+                </div>
+            </div>
+
+            <!--Column Two Logo and Round Counter-->
+
+            <div class="col-4" name="bodyCol2">
+                <div class="row" name="bodyCol2row1">
+                    <div class="col">
+                        <img src="../../static/images/KnightsHallLogo.jpg" class="logo" />
+                    </div>
+                </div>
+                <div class="row" name="bodyCol2row2">
+                    <div class="col roundBox">
+                        <div class="team round">ROUND</div>
+                        <!--{{ currentRound.round }}-->
+                        <div class="roundNum">1</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column Three Away Team Score-->
+
+            <div class="col" name="bodyCol3">
+                <div class="row" name="bodyCol3row1">
+                    <div class="col away">
+                        <h1>AWAY</h1>
+                    </div>
+                </div>
+                <div class="row" name="bodyCol3row2">
+                    <div class="col teamIMG">
+                        <img src="../../static/images/monarchs.png" class="crest" />
+                    </div>
+                </div>
+                <div class="row" name="bodyCol3row3">
+                    <div class="col away team">
+                        <!--{{ currentRound.matchInfo.awayTeam }}-->
+                        Team Name
+                    </div>
+                </div>
+                <div class="row" name="bodyCol3row4">
+                    <div class="col away score">
+                        <!--{{ currentRound.awayTeamScore }}-->
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
 
 </html>
